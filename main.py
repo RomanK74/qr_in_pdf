@@ -13,7 +13,7 @@ QR = qrcode.QRCode(
 )
 
 
-def barcode(filename: str, dirname: str):
+def qr_create(filename: str, dirname: str):
     os.mkdir(dirname)
 
     def create_barcode(line, num):
@@ -32,7 +32,7 @@ def barcode(filename: str, dirname: str):
             create_barcode(line=line, num=num)
 
 
-def add_image(dirname: str):
+def create_pdf(dirname: str):
     # creates a pdf file with qr
 
     def images_paths():
@@ -77,4 +77,4 @@ def add_image(dirname: str):
 
 if __name__ == '__main__':
     barcode('codes.txt', 'code_img')
-    add_image("code_img")
+    create_pdf("code_img")
