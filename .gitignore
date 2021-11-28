@@ -1,4 +1,5 @@
 /env/*
 *.pdf
 *.jpg
+/.idea/*
 code.txt
